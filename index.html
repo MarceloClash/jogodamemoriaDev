@@ -1,0 +1,23 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento, define este documento como HTML5 -->
+<html lang="pt-BR"> <!-- Elemento raiz do documento HTML, define a linguagem do documento como português do Brasil -->
+<head> <!-- Contém metadados/informações para o documento -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para o documento como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para ser responsiva e controla o nível de zoom inicial -->
+    <title>Memory Game</title> <!-- Título do documento, que será exibido na aba do navegador -->
+    <link rel="stylesheet" href="/src/style/style.css"> <!-- Link para o arquivo CSS externo que estiliza o documento -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"></link> <!-- Link para o ícones do Bootstrap -->
+</head>
+<body> <!-- Representa o conteúdo do documento HTML -->
+    <div class="container"> <!-- Divisão ou seção em um documento HTML, com a classe 'container' para estilos CSS -->
+        
+        <h2>Memory Game Dev </h2> <!-- Cabeçalho de nível 2, que será usado como título na página -->
+        
+        <div class="game"></div> <!-- Divisão para o jogo, com a classe 'game' para estilos CSS -->
+        <button class="reset-btn" onclick="window.location.reload()">Reset Game</button> <!-- Botão para reiniciar o jogo, com um evento de clique que recarrega a página -->
+    </div>
+    
+
+    <script src="/src/js/script.js"></script> <!-- Link para o arquivo JavaScript externo que contém a lógica do jogo -->
+
+</body>
+</html>

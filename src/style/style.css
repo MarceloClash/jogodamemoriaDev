@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Importa a família de fontes 'Poppins' do Google Fonts com diferentes pesos e estilos */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Reseta a margem e o preenchimento para todos os elementos e define o modelo de caixa para border-box */
+}
+.bi{
+    color:#03045e;
+    font-size: 3rem;
+    /* Estiliza os ícones do Bootstrap com cor azul escuro e tamanho de fonte de 3rem */
+}
+
+body{
+    background: #1d3557;
+    font-family: 'Poppins', sans-serif;
+    /* Define a cor de fundo do corpo do documento e a família de fontes para 'Poppins' */
+}
+
+.container{
+    padding: 30px;
+    width: 380px;
+    background: #457b9d;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    padding-bottom:30px;
+    /* Estiliza o container com fundo azul, posicionamento central e bordas arredondadas */
+}
+.container h2{
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 2px;
+    color: #f1faee;
+    margin-top: 3px;
+    text-transform: uppercase;
+    /* Estiliza o cabeçalho h2 dentro do container com alinhamento central, espaçamento entre letras e cor */
+}
+
+.container .reset-btn{
+    all: unset;
+    height: 40px;
+    width: 120px;
+    background: #1d3557;
+    color: #03045e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    cursor: pointer;
+    background: #a8dadc;
+    font-weight: 700;
+    /* Estiliza o botão de reset com cores, tamanho, fonte e posicionamento */
+}
+
+.container .game{
+    width: 100%;
+    height: 350px;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    transform-style:preserve-3d;
+    perspective: 500px;
+    /* Estiliza a área do jogo com flexbox e propriedades 3D */
+}
+
+.item{
+    position: relative;
+    height: 74px;
+    width: 74px;
+    background: #a8dadc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    transition: all .25s;
+    transform: rotateY(180deg);
+    /* Estiliza cada item do jogo com posição, tamanho, cor, fonte e transição para efeito flip */
+}
+
+.item::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #1d3557;
+    transition: all .25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    /* Cria um pseudo-elemento para o verso de cada item do jogo com transição e visibilidade da face traseira oculta */
+}
+
+.boxOpen::after, .boxMatch::after{
+    transform: rotateY(180deg);
+    /* Define a transformação para os itens abertos ou combinados para mostrar o verso */
+}
+::selection{
+    background: #a8dadc;
+    color: #232534;
+    /* Personaliza a cor de fundo e a cor do texto quando o texto é selecionado pelo usuário */
+}
